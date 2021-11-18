@@ -54,7 +54,9 @@ class DataPreloads: NSObject {
         } else {
             let operationQueue = OperationQueue()
             let blockOperation = BlockOperation {
-                let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {
+                var urlRequest = URLRequest(url: URL(string: url)!)
+                urlRequest.setValue("iPhone AppleWebKit", forHTTPHeaderField: "User-Agent")
+                let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
                             data, response, error in
                             if let error = error {
                                 print("\(error.localizedDescription)")

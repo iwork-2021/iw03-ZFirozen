@@ -17,6 +17,7 @@ class WebsiteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView = WKWebView(frame: CGRect(x: view.frame.origin.x, y: view.frame.origin.y, width: view.frame.width, height: view.frame.height))
         if (childView.subviews.isEmpty) {
             childView.addSubview(webView)
             childView.bringSubviewToFront(childView.subviews[0])
@@ -24,10 +25,8 @@ class WebsiteViewController: UIViewController {
         // Do any additional setup after loading the view.
         if let data = dataPreloads!.loadWebpage(urlString, webView: self) {
             webView.load(data, mimeType: "text/html", characterEncodingName: ".utf8", baseURL: URL(string: urlString)!)
-            webView.load(URLRequest(url: URL(string: urlString)!))
         }
         else {
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "websiteLoaded"), object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(loadWebpage), name: NSNotification.Name(rawValue: "websiteLoaded"), object: nil)
         }
     }
