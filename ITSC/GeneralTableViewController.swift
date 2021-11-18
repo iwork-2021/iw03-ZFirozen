@@ -7,10 +7,11 @@
 
 import UIKit
 
-class GeneralTableViewController: UITableViewController {
+class GeneralTableViewController: UITableViewController, UISearchControllerDelegate {
     
     var dataPreloads: DataPreloads?
     var index: Int = 0
+    var searchController: UISearchController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,19 @@ class GeneralTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "dataLoaded" + String(index)), object: nil)
+        
+        searchController = UISearchController.init(searchResultsController: nil)
+        searchController!.obscuresBackgroundDuringPresentation = false
+        searchController!.searchResultsUpdater = dataPreloads!
+        searchController!.delegate = self
+        navigationItem.searchController = searchController
     }
     
     @objc func loadList(notification: NSNotification) {
         //load data here
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -37,14 +46,22 @@ class GeneralTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dataPreloads?.itemNumber(index) ?? 0
+        if (searchController != nil && searchController!.isActive) {
+            return dataPreloads?.resultNumber(index) ?? 0
+        } else {
+            return dataPreloads?.itemNumber(index) ?? 0
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! GeneralTableViewCell
 
         // Configure the cell...
-        (cell.title.text, cell.detail.text, cell.link) = dataPreloads!.itemUpdate(index, indexPath.row)
+        if (searchController != nil && searchController!.isActive) {
+            (cell.title.text, cell.detail.text, cell.link) = dataPreloads!.resultUpdate(index, indexPath.row)
+        } else {
+            (cell.title.text, cell.detail.text, cell.link) = dataPreloads!.itemUpdate(index, indexPath.row)
+        }
         
         return cell
     }

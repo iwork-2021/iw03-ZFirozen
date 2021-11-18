@@ -11,6 +11,7 @@ import WebKit
 class AboutView: UIViewController {
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var cLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

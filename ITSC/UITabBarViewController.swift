@@ -17,6 +17,7 @@ class UITabBarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         dataPreloads.startLoad()
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         for i in 0...4 {
             if (i < 4) {
                 let generalViewController = self.viewControllers![i] as! GeneralViewController
