@@ -12,6 +12,7 @@ class GeneralTableViewController: UITableViewController, UISearchControllerDeleg
     var dataPreloads: DataPreloads?
     var index: Int = 0
     var searchController: UISearchController?
+    var refreshAction: UIRefreshControl?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,10 @@ class GeneralTableViewController: UITableViewController, UISearchControllerDeleg
         searchController!.searchResultsUpdater = dataPreloads!
         searchController!.delegate = self
         navigationItem.searchController = searchController
+        let refreshAction = UIRefreshControl.init()
+        refreshAction.addTarget(self, action: #selector(refreshList), for: .valueChanged)
+        refreshAction.attributedTitle = NSAttributedString.init(string: "刷新列表")
+        tableView.addSubview(refreshAction)
     }
     
     @objc func loadList(notification: NSNotification) {
@@ -35,6 +40,11 @@ class GeneralTableViewController: UITableViewController, UISearchControllerDeleg
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    @objc func refreshList() {
+        dataPreloads?.startLoad()
+        refreshAction?.endRefreshing()
     }
 
     // MARK: - Table view data source
