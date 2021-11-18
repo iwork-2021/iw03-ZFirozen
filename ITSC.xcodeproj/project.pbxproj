@@ -13,6 +13,15 @@
 		34EBE011271F08E2005CC9EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34EBE00F271F08E2005CC9EB /* Main.storyboard */; };
 		34EBE013271F08E3005CC9EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34EBE012271F08E3005CC9EB /* Assets.xcassets */; };
 		34EBE01E271F0910005CC9EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34EBE01D271F0910005CC9EB /* LaunchScreen.storyboard */; };
+		AAD6ABB627453C7300980401 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = AAD6ABB527453C7300980401 /* SwiftSoup */; };
+		AAD6ABBE2745549C00980401 /* DataPreloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABBD2745549C00980401 /* DataPreloads.swift */; };
+		AAD6ABC02745577E00980401 /* UITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABBF2745577E00980401 /* UITabBarViewController.swift */; };
+		AAD6ABC42745612900980401 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABC32745612900980401 /* AboutViewController.swift */; };
+		AAD6ABC8274590E100980401 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABC7274590E100980401 /* AboutView.swift */; };
+		AAD6ABCA2745964400980401 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABC92745964400980401 /* GeneralViewController.swift */; };
+		AAD6ABCC27459ABB00980401 /* GeneralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABCB27459ABB00980401 /* GeneralTableViewController.swift */; };
+		AAD6ABCE27459E6200980401 /* GeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABCD27459E6200980401 /* GeneralTableViewCell.swift */; };
+		AAD6ABD02745A18300980401 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD6ABCF2745A18300980401 /* WebsiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,14 @@
 		34EBE012271F08E3005CC9EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34EBE017271F08E3005CC9EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34EBE01D271F0910005CC9EB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAD6ABBD2745549C00980401 /* DataPreloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPreloads.swift; sourceTree = "<group>"; };
+		AAD6ABBF2745577E00980401 /* UITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarViewController.swift; sourceTree = "<group>"; };
+		AAD6ABC32745612900980401 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		AAD6ABC7274590E100980401 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		AAD6ABC92745964400980401 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		AAD6ABCB27459ABB00980401 /* GeneralTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTableViewController.swift; sourceTree = "<group>"; };
+		AAD6ABCD27459E6200980401 /* GeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTableViewCell.swift; sourceTree = "<group>"; };
+		AAD6ABCF2745A18300980401 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD6ABB627453C7300980401 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +75,20 @@
 			isa = PBXGroup;
 			children = (
 				34EBE009271F08E2005CC9EB /* AppDelegate.swift */,
+				AAD6ABC7274590E100980401 /* AboutView.swift */,
+				AAD6ABC32745612900980401 /* AboutViewController.swift */,
 				34EBE00B271F08E2005CC9EB /* SceneDelegate.swift */,
 				34EBE00D271F08E2005CC9EB /* ViewController.swift */,
 				34EBE00F271F08E2005CC9EB /* Main.storyboard */,
+				AAD6ABBF2745577E00980401 /* UITabBarViewController.swift */,
+				AAD6ABBD2745549C00980401 /* DataPreloads.swift */,
 				34EBE012271F08E3005CC9EB /* Assets.xcassets */,
 				34EBE017271F08E3005CC9EB /* Info.plist */,
 				34EBE01D271F0910005CC9EB /* LaunchScreen.storyboard */,
+				AAD6ABC92745964400980401 /* GeneralViewController.swift */,
+				AAD6ABCB27459ABB00980401 /* GeneralTableViewController.swift */,
+				AAD6ABCD27459E6200980401 /* GeneralTableViewCell.swift */,
+				AAD6ABCF2745A18300980401 /* WebsiteViewController.swift */,
 			);
 			path = ITSC;
 			sourceTree = "<group>";
@@ -83,6 +109,9 @@
 			dependencies = (
 			);
 			name = ITSC;
+			packageProductDependencies = (
+				AAD6ABB527453C7300980401 /* SwiftSoup */,
+			);
 			productName = ITSC;
 			productReference = 34EBE006271F08E2005CC9EB /* ITSC.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 34EBDFFD271F08E2005CC9EB;
+			packageReferences = (
+				AAD6ABB427453C7300980401 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 34EBE007271F08E2005CC9EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +170,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD6ABCE27459E6200980401 /* GeneralTableViewCell.swift in Sources */,
+				AAD6ABCC27459ABB00980401 /* GeneralTableViewController.swift in Sources */,
+				AAD6ABC8274590E100980401 /* AboutView.swift in Sources */,
+				AAD6ABC02745577E00980401 /* UITabBarViewController.swift in Sources */,
 				34EBE00E271F08E2005CC9EB /* ViewController.swift in Sources */,
+				AAD6ABCA2745964400980401 /* GeneralViewController.swift in Sources */,
 				34EBE00A271F08E2005CC9EB /* AppDelegate.swift in Sources */,
+				AAD6ABD02745A18300980401 /* WebsiteViewController.swift in Sources */,
+				AAD6ABC42745612900980401 /* AboutViewController.swift in Sources */,
+				AAD6ABBE2745549C00980401 /* DataPreloads.swift in Sources */,
 				34EBE00C271F08E2005CC9EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAD6ABB427453C7300980401 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAD6ABB527453C7300980401 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAD6ABB427453C7300980401 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34EBDFFE271F08E2005CC9EB /* Project object */;
 }
